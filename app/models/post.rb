@@ -6,4 +6,5 @@ class Post < ApplicationRecord
   validates :url, presence: true, uniqueness: true, format: { with: VALID_URL_REGEX }
 
   belongs_to :user
+  has_many :comments
 end
